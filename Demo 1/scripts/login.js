@@ -15,7 +15,7 @@ function sendForm(event) {
         password: password
     };
 
-    ajax('login.php', {method: 'POST', data: `data=${JSON.stringify(user)}`});
+    ajax('src/login.php', {method: 'POST', data: `data=${JSON.stringify(user)}`});
 } 
 
 function ajax(url, settings) {
@@ -38,9 +38,7 @@ function load(response) {
     if(response.success) {
         window.location = "dashboard.html";
     } else {
-        var label = document.createElement("label");
-        label.innerHTML = response.data;
-        label.setAttribute("id", "errors");
-        document.getElementById("login-form").appendChild(label);
+        var errors = document.getElementById("errors");
+        errors.innerHTML = response.data;
     }
 }

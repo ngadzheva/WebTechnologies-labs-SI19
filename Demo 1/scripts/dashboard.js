@@ -1,5 +1,5 @@
 (function(){
-    ajax("user.php", {method: "GET"});
+    ajax("src/user.php", {method: "GET"});
 
     var logoutBtn = document.getElementById("logout");
     logoutBtn.addEventListener("click", logout);
@@ -38,5 +38,5 @@ function load(response) {
 function logout(event) {
     event.preventDefault();
 
-    ajax("logout.php", {method: "GET"}, true);
+    ajax("src/logout.php", {method: "GET"}, true);
 }

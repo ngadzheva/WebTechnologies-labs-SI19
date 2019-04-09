@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta chareset="utf-8"/>
+
+        <title>Demo</title>
+
+        <script defer src="scripts/login.js"></script>
+        <link rel="stylesheet" href="styles/styles.css"/>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="login.html">Login</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <header id="main-header">Login</header>
+
+                <fieldset>
+                    <form id="login-form">
+                        <label id="errors"></label>
+                        <label for="user-name">User Name</label>
+                        <input type="text" id="user-name" name="userName"/>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"/>
+                        <input type="submit" id="login" value="Login"/>
+                    </form>
+                </fieldset>
+            </section>
+
+            <section id="userInfo"></section>
+        </main>
+    </body>
+</html>
